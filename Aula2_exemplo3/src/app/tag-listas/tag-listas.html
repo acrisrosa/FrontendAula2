@@ -1,1 +1,36 @@
-<p>tag-listas works!</p>
+<h1>Esta são as nossas Tags Listas</h1>
+
+<p>Minha lista Não ordenada</p>
+
+<ul>
+    <li>Nossa Linha 1</li>
+    <li>Nossa Linha 2</li> 
+</ul>
+
+
+<p>Minha lista ordenada estática</p>
+<ol>
+    <li>Nossa Linha</li>
+    <li>Nossa Linha</li>
+    <li>Nossa Linha</li>
+
+</ol>
+
+
+<p><strong>Minha lista não ordenada dinâmica</strong></p>
+<ul>
+    @for (item of this.minhaLista; track $index) {
+        <!--INTERPOLAÇÃO NO ANGULAR É CHAMADO DE PROPERTYBIND {{}}-->
+        <li>'minhalista: ' + {{ item.toLocaleUpperCase() }}</li>
+    }
+</ul>
+
+
+<p>Minha lista ordenada dinâmica</p>
+ <!--INTERPOLAÇÃO NO ANGULAR É CHAMADO DE PROPERTYBIND {{}}-->
+<ol>
+    @for (data of this.minhaListaJS; track $index) {
+         <li> {{ data }} + 'Minha Lista' </li>
+    }
+    
+</ol>
